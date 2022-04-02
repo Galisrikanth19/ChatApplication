@@ -8,6 +8,7 @@
 
 import Foundation
 
+//chat model
 struct Chat {
     var title = ""
     var imageName = ""
