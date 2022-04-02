@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F11E17F927772629372FB3 /* Pods_ChatApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B006F37A3E55725E113EB4 /* Pods_ChatApplication.framework */; };
 		FD46B8D327EC1D2E00662A2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46B8D227EC1D2E00662A2D /* AppDelegate.swift */; };
 		FD46B8D527EC1D2E00662A2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46B8D427EC1D2E00662A2D /* SceneDelegate.swift */; };
 		FD46B8D727EC1D2E00662A2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46B8D627EC1D2E00662A2D /* ViewController.swift */; };
@@ -28,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10B006F37A3E55725E113EB4 /* Pods_ChatApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB222298F5B874554DA68B5 /* Pods-ChatApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApplication.release.xcconfig"; path = "Target Support Files/Pods-ChatApplication/Pods-ChatApplication.release.xcconfig"; sourceTree = "<group>"; };
+		495FDE829467AD6BD489FA7C /* Pods-ChatApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApplication.debug.xcconfig"; path = "Target Support Files/Pods-ChatApplication/Pods-ChatApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		FD46B8CF27EC1D2E00662A2D /* ChatApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD46B8D227EC1D2E00662A2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD46B8D427EC1D2E00662A2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,17 +59,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F11E17F927772629372FB3 /* Pods_ChatApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		945FD4F0EBFD76DD3E9BCE05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10B006F37A3E55725E113EB4 /* Pods_ChatApplication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6A256B8D894E2F656C6F6D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				495FDE829467AD6BD489FA7C /* Pods-ChatApplication.debug.xcconfig */,
+				3DB222298F5B874554DA68B5 /* Pods-ChatApplication.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD46B8C627EC1D2E00662A2D = {
 			isa = PBXGroup;
 			children = (
 				FD46B8D127EC1D2E00662A2D /* ChatApplication */,
 				FD46B8D027EC1D2E00662A2D /* Products */,
+				D6A256B8D894E2F656C6F6D4 /* Pods */,
+				945FD4F0EBFD76DD3E9BCE05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +107,9 @@
 			children = (
 				FD46B8D227EC1D2E00662A2D /* AppDelegate.swift */,
 				FD46B8D427EC1D2E00662A2D /* SceneDelegate.swift */,
+				FD46B90127EC1DB000662A2D /* ChatListViewController.swift */,
 				FD46B8D627EC1D2E00662A2D /* ViewController.swift */,
 				FD46B90527EC1DFC00662A2D /* Assets.xcassets */,
-				FD46B90127EC1DB000662A2D /* ChatListViewController.swift */,
 				FD46B8E627EC1D5800662A2D /* Extension.swift */,
 				FD46B90327EC1DD700662A2D /* Main.storyboard */,
 				FD46B8E827EC1D7600662A2D /* CustomCells */,
@@ -150,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD46B8E327EC1D3100662A2D /* Build configuration list for PBXNativeTarget "ChatApplication" */;
 			buildPhases = (
+				12369D63B131B7CA25A23FAB /* [CP] Check Pods Manifest.lock */,
 				FD46B8CB27EC1D2E00662A2D /* Sources */,
 				FD46B8CC27EC1D2E00662A2D /* Frameworks */,
 				FD46B8CD27EC1D2E00662A2D /* Resources */,
+				ABAAC4A73DA193352943A8A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +238,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12369D63B131B7CA25A23FAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatApplication-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABAAC4A73DA193352943A8A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApplication/Pods-ChatApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatApplication/Pods-ChatApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatApplication/Pods-ChatApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD46B8CB27EC1D2E00662A2D /* Sources */ = {
@@ -364,12 +433,13 @@
 		};
 		FD46B8E427EC1D3100662A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 495FDE829467AD6BD489FA7C /* Pods-ChatApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9EVNS97F8T;
+				DEVELOPMENT_TEAM = EXJ74M4DL5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -382,7 +452,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Saanvi.ChatApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saanvi.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -392,12 +462,13 @@
 		};
 		FD46B8E527EC1D3100662A2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB222298F5B874554DA68B5 /* Pods-ChatApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9EVNS97F8T;
+				DEVELOPMENT_TEAM = EXJ74M4DL5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -410,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Saanvi.ChatApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saanvi.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
